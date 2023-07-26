@@ -15,6 +15,7 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": ["./tsconfig.json"],
     "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
@@ -24,15 +25,7 @@
   "plugins": ["@typescript-eslint", "import", "react", "header"],
   "rules": {
     "header/header": ["error", "header.js"],
-    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }]
-   ,"@typescript-eslint/no-shadow": "off"
-  },
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "parserOptions": {
-        "project": ["./tsconfig.json"]
-      }
-    }
-  ]
+    "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+    "@typescript-eslint/no-shadow": "off"
+  }
 }
