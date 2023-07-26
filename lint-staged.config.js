@@ -1,3 +1,8 @@
+/**
+ * @author
+ * Hamidreza Nateghi
+ */
+
 export default {
-	'*.{js,ts,jsx,tsx}': 'eslint --fix --ext .jsx,.js,.ts,.tsx',
+  '*.{js,ts,jsx,tsx}': ['prettier --write', 'eslint --fix'],
 }
