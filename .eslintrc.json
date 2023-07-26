@@ -25,6 +25,7 @@
   "rules": {
     "header/header": ["error", "header.js"],
     "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }]
+   ,"@typescript-eslint/no-shadow": "off"
   },
   "overrides": [
     {
