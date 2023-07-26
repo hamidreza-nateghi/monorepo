@@ -4,14 +4,12 @@
  */
 
 import { defaults as tsjPreset } from 'ts-jest/presets'
-import type { JestConfigWithTsJest } from 'ts-jest'
 
 const modulesToTranspile = [].join('|')
 
 export default {
   collectCoverage: true,
   coverageProvider: 'v8',
-  // coverageReporters: ['text-summary'],
   coverageThreshold: {
     global: {
       statements: 100,
@@ -20,10 +18,9 @@ export default {
       lines: 100,
     },
   },
-  preset: 'ts-jest',
+  // preset: 'ts-jest',
   setupFilesAfterEnv: ['./jest.setup.ts'],
   testEnvironment: 'jsdom',
-  // testRegex: `\\.(${['unit-test', 'test'].join('|')})\\.[jt]sx?$`,
   transform: {
     ...tsjPreset.transform,
     '^.+\\.(t|j)sx?$': [
@@ -32,9 +29,10 @@ export default {
         tsconfig: 'tsconfig.test.json',
         diagnostics: false,
         isolatedModules: true,
-        useESM: true,
       },
     ],
   },
   transformIgnorePatterns: [`<rootDir>.*(node_modules)/?!(${modulesToTranspile})`],
+  displayName: { name: 'Inspech Frontend', color: 'blue' },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'mjs', 'cjs', 'jsx', 'json', 'node'],
 }

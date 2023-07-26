@@ -21,9 +21,17 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "react", "header"],
+  "plugins": ["@typescript-eslint", "import", "react", "header"],
   "rules": {
     "header/header": ["error", "header.js"],
     "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ]
 }
