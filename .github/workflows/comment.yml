@@ -1,5 +1,6 @@
+name: Comment
 on:
-  discussion_comment:
+  pull_request_review_comment:
     types: [created]
 jobs:
   Explore-GitHub-Actions:
