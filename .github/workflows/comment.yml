@@ -1,0 +1,8 @@
+on:
+  discussion_comment:
+    types: created
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 Someone commented."
