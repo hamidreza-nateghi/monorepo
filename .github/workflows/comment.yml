@@ -1,3 +1,4 @@
+name: Comment
 on:
   discussion_comment:
     types: [created]
