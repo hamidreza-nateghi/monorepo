@@ -1,9 +1,9 @@
 /**
- * @license
- * Copyright (c) 2023 Hamidreza Nateghi. All rights reserved.
+ * @author
+ * Hamidreza Nateghi
  */
 
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 // import { useEffect } from 'react'
 
 // export { useEffect } from 'react'
